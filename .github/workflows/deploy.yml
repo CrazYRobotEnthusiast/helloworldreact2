@@ -3,7 +3,7 @@ name: Deploy React App to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main  # Trigger when changes are pushed to main
 
 jobs:
   build-and-deploy:
@@ -15,12 +15,17 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
-        
+
       - name: Build React App
         run: npm run build
-        
+
+      - name: Delete Old gh-pages Branch
+        run: |
+          git fetch origin gh-pages || echo "gh-pages branch does not exist yet"
+          git push origin --delete gh-pages || echo "No gh-pages branch to delete"
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages  # Will create gh-pages if it doesn’t exist
-          folder: build      # The directory to deploy
+          branch: gh-pages  # Deploy the fresh build to gh-pages branch
+          folder: build      # Deploy the built React app
