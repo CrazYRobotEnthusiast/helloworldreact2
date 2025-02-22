@@ -19,13 +19,10 @@ jobs:
       - name: Build React App
         run: npm run build
 
-      - name: Delete Old gh-pages Branch
-        run: |
-          git fetch origin gh-pages || echo "gh-pages branch does not exist yet"
-          git push origin --delete gh-pages || echo "No gh-pages branch to delete"
-
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages  # Deploy the fresh build to gh-pages branch
-          folder: build      # Deploy the built React app
+          branch: gh-pages
+          folder: build
+          clean: true  # Ensures old files are removed without deleting the branch
+
