@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/helloworldreact2/static/css/main.e6c13ad2.css",
-    "main.js": "/helloworldreact2/static/js/main.2460ba81.js",
+    "main.js": "/helloworldreact2/static/js/main.570963b8.js",
     "static/js/453.aa306ad0.chunk.js": "/helloworldreact2/static/js/453.aa306ad0.chunk.js",
     "index.html": "/helloworldreact2/index.html",
     "main.e6c13ad2.css.map": "/helloworldreact2/static/css/main.e6c13ad2.css.map",
-    "main.2460ba81.js.map": "/helloworldreact2/static/js/main.2460ba81.js.map",
+    "main.570963b8.js.map": "/helloworldreact2/static/js/main.570963b8.js.map",
     "453.aa306ad0.chunk.js.map": "/helloworldreact2/static/js/453.aa306ad0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.2460ba81.js"
+    "static/js/main.570963b8.js"
   ]
 }
